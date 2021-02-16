@@ -1,0 +1,25 @@
+{
+  "name": "floni",
+  "version": "1.0.0",
+  "description": "Floni Website",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "node-sass src/scss -o dist/css",
+    "build:typescript": "tsc -p ./",
+    "watch:scss": "node-sass -w src/scss -o dist/css",
+    "watch:typescript": "tsc -p ./ -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValentinHLica/floni.git"
+  },
+  "author": "Valentin Lica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValentinHLica/floni/issues"
+  },
+  "homepage": "https://github.com/ValentinHLica/floni#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
