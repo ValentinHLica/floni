@@ -1,3 +1,7 @@
 @import "./components/variables";
 @import "./components/responsive";
 @import "./components/global";
+
+// Components
+@import "./components/Header/index";
+@import "./components/Drawer/index";

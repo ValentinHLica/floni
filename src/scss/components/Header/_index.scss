@@ -1,0 +1,12 @@
+@import "container";
+@import "logo";
+@import "menu";
+@import "dropdownButton";
+
+.header__contact__button {
+    display: none;
+
+    @include responsive(pc-small) {
+        display: block;
+    }
+}

@@ -1,0 +1,18 @@
+.header__menu {
+    display: none;
+
+    @include responsive(pc-small) {
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        margin: 0 10px;
+
+        a {
+            padding: 5px;
+            color: $gray-dark;
+            font-weight: 500;
+        }
+    }
+}
