@@ -82,24 +82,33 @@
             defer
         ></script>
 
+        <!-- FontAwesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+
         <!-- Main -->
         <link rel="stylesheet" href="dist/css/main.css" />
+        <script src="dist/js/map.js" defer></script>
         <script src="dist/js/main.js" defer></script>
     </head>
 
-    <body>
+    <body id="body">
         <!-- Header -->
         <header>
             <div class="container">
-                <div class="header__logo">
+                <a href="#body" class="header__logo">
                     <img src="dist/images/floni-logo.PNG" alt="Floni Logo" />
-                </div>
+                </a>
 
                 <ul class="header__menu">
-                    <li><a href="#">Shtepi</a></li>
-                    <li><a href="#">Sherbimet</a></li>
-                    <li><a href="#">Produktet</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#body">Shtepi</a></li>
+                    <li><a href="#services">Sherbimet</a></li>
+                    <li><a href="#products">Produktet</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
 
                 <a href="#" class="header__contact__button btn btn--dark">
@@ -107,22 +116,7 @@
                 </a>
 
                 <button class="header__dropdown__button">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-menu"
-                    >
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
         </header>
@@ -133,35 +127,21 @@
             <ul class="drawer__menu">
                 <li class="drawer__menu__button">
                     <button class="drawer__close_button">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="feather feather-x"
-                        >
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
+                        <i class="fas fa-times"></i>
                     </button>
                 </li>
-                <li><a href="#">Shtepi</a></li>
-                <li><a href="#">Sherbimet</a></li>
-                <li><a href="#">Produktet</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#body">Shtepi</a></li>
+                <li><a href="#services">Sherbimet</a></li>
+                <li><a href="#products">Produktet</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
         </div>
 
         <!-- Slogan -->
-        <section class="homepage__jumbotron">
+        <section class="homepage__jumbotron" id="slogan">
             <div class="container">
                 <div class="jumbotron__content">
-                    <h1>The best internet service provider in the country</h1>
+                    <h1>Agjencia & Kancelari vendi ku zgjidhet gjithcka.</h1>
                     <p>
                         Agjencia & Kancelari FLONI vjen prane jush me te gjitha
                         sherbimet utilitare per komunitetin si dhe me nje game
@@ -180,7 +160,7 @@
         </section>
 
         <!-- Services -->
-        <section class="homepage__services container">
+        <section class="homepage__services container" id="services">
             <h2 class="services__title">Sherbimet</h2>
             <div class="services__slider">
                 <div class="service__slide">
@@ -265,13 +245,13 @@
                 </div>
             </div>
 
-            <a href="#" class="btn btn--primary services__view-all"
+            <a href="sherbimet.html" class="btn btn--primary services__view-all"
                 >Shiko te Gjitha</a
             >
         </section>
 
         <!-- Products -->
-        <section class="homepage__products container">
+        <section class="homepage__products container" id="products">
             <h2 class="products__title">Produktet</h2>
             <div class="products__slider">
                 <div class="service__slide">
@@ -356,16 +336,14 @@
                 </div>
             </div>
 
-            <a href="#" class="btn btn--primary products__view-all"
+            <a href="sherbimet.html" class="btn btn--primary products__view-all"
                 >Shiko te Gjitha</a
             >
         </section>
 
         <!-- Contact -->
-        <section class="homepage__contact">
+        <section class="homepage__contact" id="contact">
             <div class="container">
-                <h2 class="contact__title">Kontakt</h2>
-
                 <div class="contact__wrapper">
                     <ul class="contact__info">
                         <li>
@@ -373,13 +351,26 @@
                         </li>
 
                         <li>
-                            <strong>Adresa:</strong> Rruga “Unaza e Madhe”,
-                            pranë Bar “Ismalaj”
+                            <strong
+                                ><i class="fas fa-map-marker-alt"></i>
+                                Adresa:</strong
+                            >
+                            Rruga “Unaza e Madhe”, pranë Bar “Ismalaj”
                         </li>
 
-                        <li><strong>E-mail:</strong> floni0608@gmail.com</li>
+                        <li>
+                            <strong
+                                ><i class="fas fa-envelope"></i> E-mail:</strong
+                            >
+                            <a href="mailto:floni0608@gmail.com"
+                                >floni0608@gmail.com</a
+                            >
+                        </li>
 
-                        <li><strong>Mob:</strong> 069 456 0760</li>
+                        <li>
+                            <strong><i class="fas fa-phone"></i> Mob:</strong>
+                            <a href="tel:+069 456 0760">069 456 0760</a>
+                        </li>
                     </ul>
                     <div id="location__map"></div>
                 </div>
@@ -389,21 +380,27 @@
         <!-- Footer -->
         <footer>
             <div class="container">
-                <div class="footer__logo">
+                <a href="#body" class="footer__logo">
                     <img src="dist/images/floni-logo.PNG" alt="" />
-                </div>
+                </a>
 
                 <ul class="footer__menu">
-                    <li><a href="#">Shtepi</a></li>
-                    <li><a href="#">Sherbimet</a></li>
-                    <li><a href="#">Produktet</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#body">Shtepi</a></li>
+                    <li><a href="#services">Sherbimet</a></li>
+                    <li><a href="#products">Produktet</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
 
                 <ul class="footer__social">
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Twitter</a></li>
+                    <li>
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                    </li>
                 </ul>
             </div>
         </footer>

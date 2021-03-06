@@ -42,6 +42,7 @@ $(document).ready(function () {
         slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 2000,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -78,6 +79,7 @@ $(document).ready(function () {
         slidesToScroll: 4,
         autoplay: true,
         autoplaySpeed: 2000,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -102,13 +104,4 @@ $(document).ready(function () {
             },
         ],
     });
-});
-
-// Leaflet
-var mymap = L.map("location__map").setView([51.505, -0.09], 13);
-
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 });

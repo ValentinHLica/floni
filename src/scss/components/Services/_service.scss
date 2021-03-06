@@ -1,0 +1,56 @@
+.all__services {
+    .container {
+        h1 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 24px;
+            row-gap: 24px;
+
+            @include responsive(mobile-large) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include responsive(pc-small) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include responsive(pc) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .services__item {
+                .item__image {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .item__content {
+                    padding-top: 24px;
+
+                    .item__title {
+                        margin-bottom: 16px;
+                        font-size: 1.5em;
+                    }
+
+                    .item__text {
+                        font-weight: 400;
+                        color: $gray-dark-ligher;
+                    }
+
+                    a.btn {
+                        display: inline-block;
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

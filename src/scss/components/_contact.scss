@@ -1,40 +1,55 @@
 .homepage__contact {
     background: linear-gradient(to right, $blue-light, $blue);
     padding: 20px 0;
+    margin-top: 74px;
 
     .container {
-        .contact__title {
-            color: white;
-        }
-
         .contact__wrapper {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             background-color: white;
             border-radius: 10px;
             padding: 46px 20px;
             margin: 20px 0;
             box-shadow: 0 1px 1px #a0a0a0;
 
+            @include responsive(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .contact__info {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                padding: 20px;
 
                 li {
                     color: $gray-dark;
                     margin: 5px 0;
 
+                    @include responsive(pc-small) {
+                        font-size: 1.2em;
+                    }
+
                     h2 {
                         color: $gray-dark;
                         margin-bottom: 20px;
+
+                        @include responsive(pc-small) {
+                            font-size: 2em;
+                        }
+                    }
+
+                    i {
+                        width: 20px;
                     }
                 }
             }
 
             #location__map {
-                height: 180px;
+                height: 250px;
                 border-radius: 4px;
+                z-index: 1;
             }
         }
     }

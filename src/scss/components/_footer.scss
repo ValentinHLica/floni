@@ -20,5 +20,19 @@ footer {
                 margin: 0 10px;
             }
         }
+
+        .footer__menu {
+            display: none;
+
+            @include responsive(tablet) {
+                display: flex;
+            }
+        }
+
+        .footer__social {
+            li {
+                font-size: 25px;
+            }
+        }
     }
 }

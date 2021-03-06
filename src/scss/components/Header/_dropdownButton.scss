@@ -1,14 +1,12 @@
 .header__dropdown__button {
     display: flex;
-    background-color: $gray-dark;
-    padding: 5px;
+    background-color: #242424;
+    padding: 5px 10px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
-
-    svg {
-        color: white;
-    }
+    color: white;
+    font-size: 20px;
 
     @include responsive(pc-small) {
         display: none;
