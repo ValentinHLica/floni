@@ -1,0 +1,50 @@
+.homepage__jumbotron {
+    padding: 10px 0;
+
+    .container {
+        display: grid;
+
+        @include responsive(pc-small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .jumbotron__content {
+            text-align: center;
+            padding: 64px 0;
+
+            @include responsive(mobile-large) {
+                padding: 64px 24px;
+            }
+
+            @include responsive(pc-small) {
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 2em;
+
+                @include responsive(tablet) {
+                    font-size: 3em;
+                }
+            }
+
+            p {
+                margin: 24px 0;
+            }
+        }
+
+        .jumbotron__image {
+            display: none;
+
+            @include responsive(pc-small) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -12,7 +12,7 @@
             content="Agjencia & Kancelari FLONI vjen prane jush me te gjitha sherbimet utilitare per komunitetin si dhe me nje game artikujsh kancelarike per studentet dhe jo vetem."
         />
         <link rel="canonical" href="" />
-        <meta name="author" content="Floni" />
+        <meta name="author" conteent="Floni" />
         <meta
             name="keyword"
             content="kancelari, agjenci, e-albania, Çertifikata personale/familjare, Karte shendeti, Sigurime shendetesore, Leje ndertimi, Deshmi penaliteti,Sherbime konsullore, ID & Pasaporte, Pension pleqerie, Aplikime ne ambasade,, Vize pune, Vize turistike, Vize arsimimi, Bashkime familjare, Ambasada angleze, Ambasada amerikane, Ambasada gjermane, Ambasada suedeze, Libra artistike, Libra shkollore, Enciklopedi, Fjalore, Libra, specifike, Printime, Fotokopje, Informacione, Projekte, Detyra Kursi, Diploma Bachelor/Master, Ese ne gjuhen shqipe dhe angleze, Plastifikime, Perkthimit dhe Redaktim ne Gjuhe shqipe, angleze dhe italiane, Shtypshkrimi, Fletepalosje, Kartevizita, Postera, Unaza e Madhe"
@@ -46,6 +46,43 @@
         <meta property="og:site_name" content="Floni - AGJENCI & KANCELARI" />
         <meta property="og:locale" content="al" />
 
+        <!-- Slick Slider -->
+        <script
+            type="text/javascript"
+            src="http://code.jquery.com/jquery-1.11.0.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+            defer
+        ></script>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+
+        <!-- Leaflet -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""
+            defer
+        ></script>
+
+        <!-- Main -->
         <link rel="stylesheet" href="dist/css/main.css" />
         <script src="dist/js/main.js" defer></script>
     </head>
@@ -55,14 +92,14 @@
         <header>
             <div class="container">
                 <div class="header__logo">
-                    <img src="public/images/floni-logo.PNG" alt="Floni Logo" />
+                    <img src="dist/images/floni-logo.PNG" alt="Floni Logo" />
                 </div>
 
                 <ul class="header__menu">
-                    <li><a href="#">Chosse Packet</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Program</a></li>
-                    <li><a href="#">Help & Center</a></li>
+                    <li><a href="#">Shtepi</a></li>
+                    <li><a href="#">Sherbimet</a></li>
+                    <li><a href="#">Produktet</a></li>
+                    <li><a href="#">Kontakt</a></li>
                 </ul>
 
                 <a href="#" class="header__contact__button btn btn--dark">
@@ -91,30 +128,284 @@
         </header>
 
         <!-- Drawer -->
+        <div class="drawer__backgound"></div>
         <div class="drawer">
             <ul class="drawer__menu">
-                <li class="drawer__close_button">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-x"
-                    >
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
+                <li class="drawer__menu__button">
+                    <button class="drawer__close_button">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-x"
+                        >
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
                 </li>
-                <li><a href="#">Chosse Packet</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Help & Center</a></li>
+                <li><a href="#">Shtepi</a></li>
+                <li><a href="#">Sherbimet</a></li>
+                <li><a href="#">Produktet</a></li>
+                <li><a href="#">Kontakt</a></li>
             </ul>
         </div>
+
+        <!-- Slogan -->
+        <section class="homepage__jumbotron">
+            <div class="container">
+                <div class="jumbotron__content">
+                    <h1>The best internet service provider in the country</h1>
+                    <p>
+                        Agjencia & Kancelari FLONI vjen prane jush me te gjitha
+                        sherbimet utilitare per komunitetin si dhe me nje game
+                        artikujsh kancelarike per studentet dhe jo vetem.
+                    </p>
+                    <button class="btn btn--primary">Na Kontaktoni</button>
+                </div>
+
+                <div class="jumbotron__image">
+                    <img
+                        src="dist/images/slogan-image.png"
+                        alt="Slogan Image"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="homepage__services container">
+            <h2 class="services__title">Sherbimet</h2>
+            <div class="services__slider">
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Service 1</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Service 2</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Service 3</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Service 4</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Service 5</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn--primary services__view-all"
+                >Shiko te Gjitha</a
+            >
+        </section>
+
+        <!-- Products -->
+        <section class="homepage__products container">
+            <h2 class="products__title">Produktet</h2>
+            <div class="products__slider">
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Product 1</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Product 2</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Product 3</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Product 4</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+                <div class="service__slide">
+                    <div class="slide__image">
+                        <a href="#"
+                            ><img
+                                src="dist/images/service-image.png"
+                                alt="Slide Image"
+                        /></a>
+                    </div>
+                    <div class="slide__content">
+                        <h3 class="slide__title"><a href="#">Service 5</a></h3>
+                        <p class="slide__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Dicta, eos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn--primary products__view-all"
+                >Shiko te Gjitha</a
+            >
+        </section>
+
+        <!-- Contact -->
+        <section class="homepage__contact">
+            <div class="container">
+                <h2 class="contact__title">Kontakt</h2>
+
+                <div class="contact__wrapper">
+                    <ul class="contact__info">
+                        <li>
+                            <h2>Mund te na gjeni:</h2>
+                        </li>
+
+                        <li>
+                            <strong>Adresa:</strong> Rruga “Unaza e Madhe”,
+                            pranë Bar “Ismalaj”
+                        </li>
+
+                        <li><strong>E-mail:</strong> floni0608@gmail.com</li>
+
+                        <li><strong>Mob:</strong> 069 456 0760</li>
+                    </ul>
+                    <div id="location__map"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer__logo">
+                    <img src="dist/images/floni-logo.PNG" alt="" />
+                </div>
+
+                <ul class="footer__menu">
+                    <li><a href="#">Shtepi</a></li>
+                    <li><a href="#">Sherbimet</a></li>
+                    <li><a href="#">Produktet</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+
+                <ul class="footer__social">
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Twitter</a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>

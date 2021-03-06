@@ -1,4 +1,14 @@
 header {
+    position: sticky;
+    top: 0;
+    background-color: #fafafa;
+    z-index: 2;
+    transition: box-shadow 0.3s;
+
+    &.header--scroll {
+        box-shadow: 0 1px 2px #0818230f, 0 1px 3px #0818231a;
+    }
+
     .container {
         display: flex;
         justify-content: space-between;

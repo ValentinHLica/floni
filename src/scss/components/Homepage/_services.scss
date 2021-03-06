@@ -1,0 +1,47 @@
+.homepage__services {
+    margin: 64px auto;
+
+    .services__title {
+        font-size: 2em;
+        margin-bottom: 24px;
+    }
+
+    .services__slider {
+        .service__slide {
+            margin: 0 16px;
+
+            .slide__image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .slide__content {
+                padding-top: 24px;
+
+                .slide__title {
+                    margin-bottom: 16px;
+                    font-size: 1.5em;
+                }
+
+                .slide__text {
+                    font-weight: 400;
+                    color: $gray-dark-ligher;
+                }
+
+                a.btn {
+                    display: inline-block;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    .services__view-all {
+        display: block;
+        margin: 24px auto;
+        width: fit-content;
+    }
+}
